@@ -134,3 +134,65 @@ li::before {
     margin-top: 16px;
     font-size: 12px;
   }
+  @media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .nav a {
+        margin: 10px 0;
+    }
+
+    .principal {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    section {
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para tabletas y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1025px) {
+    .aside {
+        padding: 20px;
+    }
+
+    .clima {
+        max-width: 70%;
+    }
+
+    .input-clima {
+        max-width: 40%;
+    }
+
+    #datosClima {
+        font-size: 16px;
+    }
+}
