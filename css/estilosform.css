@@ -59,3 +59,57 @@ input[type="submit"] {
 li {
     margin-bottom: 5px;
 }
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .nav a {
+        margin: 10px 0;
+    }
+
+    .principal {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    section {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    /* Estilos para la sección de formulario */
+    .formulario {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Estilos para la sección de equipo */
+    .equipo {
+        margin-top: 20px;
+    }
+}
