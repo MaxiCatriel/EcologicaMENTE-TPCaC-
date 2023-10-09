@@ -1,0 +1,44 @@
+form {
+    width: 400%; 
+    margin: 0 auto; 
+    padding: 20px;
+    border: 1px solid lightblue;
+    background-color: lavender;
+    text-align: left; 
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold; 
+}
+
+textarea,
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid lavender;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+input:required, textarea:required {
+    border-color: blue; 
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: red; 
+}
+
