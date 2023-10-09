@@ -44,15 +44,37 @@ h1{
 .principal {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    margin: 20px; 
+  }
+
+.section {
+    flex: 1;
+    margin: 0 10px; 
+    padding: 10px;
+    border: 1px solid #ccc; 
 }
 
-.seccion {
-    flex: 2;
-}
 
-.seccion h3 {
+
+.seccion h2 {
     font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: justify;
+    padding: 0;
+}
+
+ul::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+li::before {
+    content: "● ";
+    color: red;
 }
 
 .articulos {
