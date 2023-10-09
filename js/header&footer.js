@@ -3,7 +3,7 @@ let men= `
     <img src="./Imagenes/ecologiamental.png" alt="Logo de la Página">
 </div>
 <div class="pag">
-    <h1>EcologiaMENTE</h1>
+    <h1>EcologicaMENTE</h1>
 </div>
             
 <nav class="nav">
