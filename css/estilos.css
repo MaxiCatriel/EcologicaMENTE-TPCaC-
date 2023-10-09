@@ -134,7 +134,8 @@ li::before {
     margin-top: 16px;
     font-size: 12px;
   }
-  @media (max-width: 768px) {
+ /* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
     .container {
         padding: 0 10px;
     }
@@ -161,12 +162,20 @@ li::before {
     section {
         margin: 10px 0;
     }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
 }
 
 /* Estilos para tabletas y pantallas medianas */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1024px) {
     h1 {
-        font-size: 16px;
+        font-size: 36px;
     }
 
     .logo img {
