@@ -46,12 +46,19 @@
         </div>
         
             <!--API clima--> 
-        <div class="clima">
-            <h1>Aplicación de Clima</h1>
-            <input type="text" class="input-clima" id="ciudadEntrada" placeholder="Ingrese una ciudad">
-            <button id="botonBusqueda">Buscar</button>
-            <div id="datosClima"></div>
-        </div>
+            <div id="app" class="clima">
+                <h1>Aplicación de Clima</h1>
+                <input type="text" class="input-clima" v-model="ciudad" placeholder="Ingrese una ciudad">
+                <button @click="buscarClima">Buscar</button>
+                <div id="datosClima">
+                    <h2>{{ ciudadNombre }}, {{ paisNombre }}</h2>
+                    <p>La temperatura actual es: {{ temperatura }} °C</p>
+                    <p>La humedad es: {{ humedad }} %</p>
+                    <img :src="iconoURL" alt="Icono del clima">
+                    <p>La descripción meteorológica es: {{ descripcion }}</p>
+                </div>
+            </div>
+            
         
         <main class="principal">
             <section class="seccion">
@@ -74,6 +81,7 @@
         <footer class="footer"></footer>
     </div>
     <!--Javascript para API clima-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
     <!-- Javascript para el Carrousel-->
     <script src="./js/carrousel.js"></script>

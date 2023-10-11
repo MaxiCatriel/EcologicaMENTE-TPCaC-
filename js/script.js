@@ -1,50 +1,41 @@
-let urlBase = 'https://api.openweathermap.org/data/2.5/weather?';
-let api_key = 'f77e7b07ddecaa76d309b980c819d00c';
-let difKelvin = 273.15;
+const app = Vue.createApp({
+    data() {
+        return {
+            ciudad: '',
+            ciudadNombre: '',
+            paisNombre: '',
+            temperatura: 0,
+            humedad: 0,
+            descripcion: '',
+            icono: '',
+        };
+    },
+    methods: {
+        buscarClima() {
+            if (this.ciudad) {
+                this.fetchdatosClima(this.ciudad);
+            }
+        },
+        fetchdatosClima(ciudad) {
+            const urlBase = 'https://api.openweathermap.org/data/2.5/weather?';
+            const api_key = 'f77e7b07ddecaa76d309b980c819d00c';
+            const difKelvin = 273.15;
 
-document.getElementById('botonBusqueda').addEventListener('click', () => {
-    const ciudad = document.getElementById('ciudadEntrada').value
-    if (ciudad){
-        fetchdatosClima(ciudad);
-    }
-})
+            fetch(`${urlBase}q=${ciudad}&appid=${api_key}`)
+                .then(response => response.json())
+                .then(data => {
+                    this.ciudadNombre = data.name;
+                    this.paisNombre = data.sys.country;
+                    this.temperatura = Math.floor(data.main.temp - difKelvin);
+                    this.humedad = data.main.humidity;
+                    this.descripcion = data.weather[0].description;
+                    this.icono = data.weather[0].icon;
+                });
+        },
+        iconoURL() {
+            return `https://openweathermap.org/img/wn/${this.icono}@2x.png` ;
+        },
+    },
+});
 
-function fetchdatosClima(ciudad){
-    fetch(`${urlBase}q=${ciudad}&appid=${api_key}`)
-    .then(response => response.json())
-    .then(response => mostrarDatosClima(response));
-}
-
-function mostrarDatosClima(data){
-
-    const divDatosClima = document.getElementById('datosClima');
-    divDatosClima.innerHTML='';
-
-    const ciudadNombre = data.name;
-    const paisNombre = data.sys.country;
-    const temperatura = data.main.temp;
-    const humedad = data.main.humidity; 
-    const descripcion = data.weather[0].description;
-    const icono = data.weather[0].icon;
-
-    const ciudadTitulo = document.createElement('h2');
-    ciudadTitulo.textContent = `${ciudadNombre}, ${paisNombre}`;
-    
-    const temperaturaInfo = document.createElement('p');
-    temperaturaInfo.textContent = `La temperatura actual es : ${Math.floor(temperatura-difKelvin)} °C`;
-
-    const humedadInfo = document.createElement('p');
-    humedadInfo.textContent = `La humedad es : ${humedad} %`;
-
-    const iconoInfo = document.createElement('img');
-    iconoInfo.src = `https://openweathermap.org/img/wn/10d@2x.png`
-
-    const descripcionInfo = document.createElement('p');
-    descripcionInfo.textContent = `La descripcion meteorologica es: ${descripcion}`;
-
-    divDatosClima.appendChild(ciudadTitulo);
-    divDatosClima.appendChild(temperaturaInfo);
-    divDatosClima.appendChild(humedadInfo);
-    divDatosClima.appendChild(iconoInfo);
-    divDatosClima.appendChild(descripcionInfo);
-}
+app.mount('#app');
