@@ -50,11 +50,11 @@
                 <h1>Aplicación de Clima</h1>
                 <input type="text" class="input-clima" v-model="ciudad" placeholder="Ingrese una ciudad">
                 <button @click="buscarClima">Buscar</button>
-                <div id="datosClima">
+                <div id="datosClima" v-if="ciudadNombre">
                     <h2>{{ ciudadNombre }}, {{ paisNombre }}</h2>
                     <p>La temperatura actual es: {{ temperatura }} °C</p>
                     <p>La humedad es: {{ humedad }} %</p>
-                    <img :src="iconoURL" alt="Icono del clima">
+                    <img v-bind:src="iconoURL" alt="Icono del clima">
                     <p>La descripción meteorológica es: {{ descripcion }}</p>
                 </div>
             </div>

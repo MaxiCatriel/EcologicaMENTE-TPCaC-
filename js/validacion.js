@@ -16,7 +16,7 @@ const form = document.getElementById('contactForm');
         }
 
        
-        alert('Formulario enviado correctamente. El correo electrónico no se ha enviado (simulado).');
+        alert('Formulario enviado correctamente. (simulado).');
 
         // Limpieza del formulario
         form.reset();
