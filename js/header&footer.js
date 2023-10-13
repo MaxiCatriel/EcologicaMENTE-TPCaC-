@@ -15,7 +15,7 @@ let men= `
 document.querySelector("header").innerHTML= men
 
 let fot =`<nav class="pie">
-<p>Los4deCodo - Todos los derechos reservados &copy; 2023</p>
+    <p>Los4deCodo - Todos los derechos reservados &copy; 2023</p>
     <div class="redes-sociales">
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
             <a href="https://api.whatsapp.com/send?phone=1234567890" class="social-icon"><i class="fab fa-whatsapp"></i></a>
