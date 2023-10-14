@@ -124,7 +124,9 @@ a:hover {
 .pie p {
     margin: 0;
 }
-
+p {
+    text-align: justify;
+  }
 .clima {
     background-color: rgb(245, 243, 228);
     box-shadow: #333;
