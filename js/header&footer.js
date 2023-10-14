@@ -1,4 +1,4 @@
-let men= `
+let men = `
 <div class="logo"> 
     <img src="./Imagenes/ecologiamental.png" alt="Logo de la Página">
 </div>
@@ -12,9 +12,9 @@ let men= `
     <a href="nosotros.html">Nosotros</a>
     <a href="contacto.html">Contacto</a>
 </nav> `
-document.querySelector("header").innerHTML= men
+document.querySelector("header").innerHTML = men
 
-let fot =`<nav class="pie">
+let fot = `<nav class="pie">
     <p>Los4deCodo - Todos los derechos reservados &copy; 2023</p>
     <div class="redes-sociales">
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -23,4 +23,4 @@ let fot =`<nav class="pie">
     </div>
 </nav>`
 
-document.querySelector("footer").innerHTML= fot
+document.querySelector("footer").innerHTML = fot

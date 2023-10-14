@@ -33,7 +33,7 @@ const app = Vue.createApp({
                 });
         },
         iconoURL() {
-            return `https://openweathermap.org/img/wn/${this.icono}@2x.png` ;
+            return `https://openweathermap.org/img/wn/${this.icono}@2x.png`;
         },
     },
 });

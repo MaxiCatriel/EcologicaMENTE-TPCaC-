@@ -1,5 +1,4 @@
-
-body {    
+body {
     background-color: rgb(188, 206, 188);
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,11 +12,12 @@ body {
     background-color: whitesmoke;
 }
 
-h1{
-    font-family:'Times New Roman', Times, serif; 
+h1 {
+    font-family: 'Times New Roman', Times, serif;
     font-size: 48px;
     margin: 0;
 }
+
 .header {
     border: 1px solid black;
     background-color: rgb(105, 173, 131);
@@ -43,14 +43,14 @@ h1{
 .principal {
     display: flex;
     justify-content: space-between;
-    margin: 20px; 
-  }
+    margin: 20px;
+}
 
 section {
     flex: 1;
-    margin: 0 5px; 
+    margin: 0 5px;
     padding: 2px;
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
 }
 
 
@@ -87,11 +87,12 @@ li::before {
 a {
     color: #007bff;
     text-decoration: none;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 a:hover {
-    text-decoration: underline; /* Subraya el enlace cuando el cursor está sobre él */
+    text-decoration: underline;
+    /* Subraya el enlace cuando el cursor está sobre él */
 }
 
 
@@ -107,7 +108,8 @@ a:hover {
 
 .aside img {
     width: 100%;
-    height: auto; /* Para mantener la proporción original de la imagen */
+    height: auto;
+    /* Para mantener la proporción original de la imagen */
 }
 
 
@@ -126,9 +128,9 @@ a:hover {
 .clima {
     background-color: rgb(245, 243, 228);
     box-shadow: #333;
-    text-align: center; 
-    max-width: 90%;   
-    margin: 0 auto;    
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
 
 }
 
@@ -137,27 +139,29 @@ a:hover {
     padding: 10px;
     font-size: 16px;
     max-width: 50%;
-  }
-  
-  button {
+}
+
+button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #5ad2e8;
     color: #ffffff;
     border: black;
     cursor: pointer;
-  }
-  
-  #datosClima {
+}
+
+#datosClima {
     align-items: center;
     margin-top: 16px;
     font-size: 12px;
-  }
+}
 
-  .video-container {
+.video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Proporción 16:9 para video */
-    padding-top: 30px; /* Espacio extra para elementos superpuestos, si los hay */
+    padding-bottom: 56.25%;
+    /* Proporción 16:9 para video */
+    padding-top: 30px;
+    /* Espacio extra para elementos superpuestos, si los hay */
     height: 0;
     overflow: hidden;
 }
@@ -170,7 +174,7 @@ a:hover {
     height: 100%;
 }
 
- /* Estilos para pantallas pequeñas (móviles) */
+/* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 576px) {
     .container {
         padding: 0 10px;
