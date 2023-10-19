@@ -158,6 +158,10 @@ button {
     font-size: 12px;
 }
 
+.gif-reproducir-continuamente {
+    animation-iteration-count: infinite;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
